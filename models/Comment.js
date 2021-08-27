@@ -11,45 +11,34 @@ Comment.init(
             primaryKey: true,
             autoIncrement: true
         },
-        username: {
+        comment_text: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                notEmpty: true,
+                len: [1]
             }
         },
-        email: {
+        user_id: {
             type: DataTypes.STRING,
-            allowNull: false,
-            unique: true,
-            validate: {
-                isEmail: true
+            references: {
+                model: 'user',
+                key: 'id'
             }
         },
-        password: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                // character must be at least 5 characters long
-                len: [5]
+        post_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'post',
+                key: 'id'
             }
         }
     },
     {
-        // hooks for password hashing
-        hooks: {
-            async beforeCreate(newUserData) {
-                // adds 10 digits of 'salt'
-                newUserData.password = await bcrypt.hash(newUserData.password, 10);
-                return updatedUserData;
-            }
-        },
         sequelize,
-        timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'user'
+        modelName: 'comment'
     }
 );
 
-module.exports = User;
+module.exports = Comment;
