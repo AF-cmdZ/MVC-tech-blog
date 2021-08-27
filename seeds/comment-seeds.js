@@ -2,34 +2,34 @@ const { Comment } = require('../models');
 
 const commentData = [
     {
-        comment_text: '',
-        post_id:
-        user_id: 
+        comment_text: 'Texas could really use something like this!',
+        post_id: 2,
+        user_id: 1,
     },
     {
-        comment_text: '',
-        post_id:
-        user_id:
+        comment_text: 'Putting Designers out of work since 2013.',
+        post_id: 1,
+        user_id: 5,
     },
     {
-        comment_text: '',
-        post_id:
-        user_id:
+        comment_text: 'Will these be cheaper than Teslas?',
+        post_id: 4,
+        user_id: 3,
     },
     {
-        comment_text: '',
-        post_id:
-        user_id:
+        comment_text: 'Best not to exercise at all -- for safety.',
+        post_id: 3,
+        user_id: 2,
     },
     {
-        comment_text: '',
-        post_id:
-        user_id:
+        comment_text: 'So many jpgs!',
+        post_id: 5,
+        user_id: 1,
     },
     {
-        comment_text: '',
-        post_id:
-        user_id:
+        comment_text: 'This is why I use facebook.',
+        post_id: 6,
+        user_id: 4,
     },
 ];
 
