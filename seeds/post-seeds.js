@@ -13,7 +13,7 @@ const postData = [
     },
     {
         title: 'Peloton subpoenaed over treadmill injury',
-        post_text: 'The Commission cited more than 70 incidents in all, noting, “a six-year-old child recently died after being pulled under the rear of the treadmill.',
+        post_text: 'Peloton has received 72 reports of adult users, children, pets and/or objects being pulled under the rear of the treadmill.',
         user_id: 3,
     },
     {
