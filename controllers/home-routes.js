@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
             'title',
             'created_at',
         ],
-        order: [[ 'created at', 'DESC']],
+        order: [[ 'created_at', 'DESC']],
         include: [
             {
                 model: User,
