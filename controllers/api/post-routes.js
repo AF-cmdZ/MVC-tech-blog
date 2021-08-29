@@ -11,9 +11,8 @@ router.get('/', (req, res) => {
             'id',
             'post_text',
             'title',
-            'created_at',
         ],
-        order: [['created at', 'DESC']],
+        order: ['DESC'],
         include: [
             {
                 model: User,
@@ -21,7 +20,7 @@ router.get('/', (req, res) => {
             },
             {
                 model: Comment,
-                attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+                attributes: ['id', 'comment_text', 'post_id', 'user_id'],
                 include: {
                     model: User,
                     attributes: ['username']
@@ -46,7 +45,6 @@ router.get('/:id', (req, res) => {
                 'id',
                 'post_text',
                 'title',
-                'created_at',
             ],
             include: [
                 {
@@ -55,7 +53,7 @@ router.get('/:id', (req, res) => {
                 },
                 {
                     model: Comment,
-                    attributes: ['id', 'comment_text', 'post_id','user_id', 'created_at'],
+                    attributes: ['id', 'comment_text', 'post_id','user_id'],
                     include: {
                         model: User,
                         attributes: ['username']
