@@ -31,6 +31,12 @@ Comment.init(
                 model: 'post',
                 key: 'id'
             }
+        },
+        created_at: {
+            type: DataTypes.STRING,
+        },
+        updated_at: {
+            type: DataTypes.STRING,
         }
     },
     {

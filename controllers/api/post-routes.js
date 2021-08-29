@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User, Post, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
+const withAuth = require('../../utils/auth');
 // const sequelize = require('./config/connection');
 // const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
@@ -11,6 +12,7 @@ router.get('/', (req, res) => {
             'id',
             'post_text',
             'title',
+            'created_at',
         ],
         order: ['DESC'],
         include: [
@@ -20,7 +22,7 @@ router.get('/', (req, res) => {
             },
             {
                 model: Comment,
-                attributes: ['id', 'comment_text', 'post_id', 'user_id'],
+                attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
                 include: {
                     model: User,
                     attributes: ['username']
@@ -45,6 +47,7 @@ router.get('/:id', (req, res) => {
                 'id',
                 'post_text',
                 'title',
+                'created_at'
             ],
             include: [
                 {
@@ -53,7 +56,7 @@ router.get('/:id', (req, res) => {
                 },
                 {
                     model: Comment,
-                    attributes: ['id', 'comment_text', 'post_id','user_id'],
+                    attributes: ['id', 'comment_text', 'post_id','user_id', 'created_at'],
                     include: {
                         model: User,
                         attributes: ['username']

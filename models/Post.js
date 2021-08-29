@@ -28,6 +28,12 @@ Post.init(
                 model: 'user',
                 key: 'id'
             }
+        },
+        created_at: {
+            type: DataTypes.STRING,
+        },
+        updated_at: {
+            type: DataTypes.STRING,
         }
     },
     {
