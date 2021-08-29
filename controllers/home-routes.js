@@ -40,7 +40,7 @@ router.get('/', (req, res) => {
     });
 });
 
-// Render a single post
+// Render the single post page
 router.get('/post/:id', (req, res) => {
     Post.findOne({
         where: {
@@ -82,4 +82,13 @@ router.get('/post/:id', (req, res) => {
         console.log(err);
         res.status(500).json(err);
     });
+});
+
+// render the login page. if user is logged in, redirect to homepage
+router.get('/login', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+    res.render('login');
 });
