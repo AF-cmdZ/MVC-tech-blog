@@ -1,9 +1,10 @@
-<article class="post">
+<article class="post p-2">
       <div class="title">
-        <span><a href="/post/{{id}}">{{title}}</a></span><span style="float:right">Posted by {{user.username}} on {{format_date created_at}}</span><br>
-        <span style="float:right">{{comments.length}} {{format_plural "comment" comments.length}}</span>
+        <span><a href="/post/{{id}}" class="btn btn-info mb-2 mt-1 fs-5" role="button">{{title}}</a></span>
+        <span style="float:right" class="fs-6">Posted by {{user.username}} on {{format_date created_at}}</span><br>
+        <span style="float:right" class="text-secondary fs-6">{{comments.length}} {{format_plural "comment" comments.length}}</span>
       </div>
-      <div class = "content">
-          <p>{{post_text}}</p>
+      <div class="content">
+          <p class="fs-5">{{post_text}}</p>
       </div>
     </article>
