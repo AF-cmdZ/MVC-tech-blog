@@ -1,10 +1,11 @@
 <article class="post p-2">
       <div class="title">
-        <span><a href="/post/{{id}}" class="btn btn-info mb-2 mt-1 fs-5" role="button">{{title}}</a></span>
-        <span style="float:right" class="fs-6">Posted by {{user.username}} on {{format_date created_at}}</span><br>
-        <span style="float:right" class="text-secondary fs-6">{{comments.length}} {{format_plural "comment" comments.length}}</span>
+        <span><i class="fas fa-newspaper text-info text-opacity-50"></i></span><br/>
+        <span><a href="/post/{{id}}" class="text-info mb-2 mt-1 fs-3" style="text-decoration: none;">{{title}}</a></span>
+        <span style="float:right" class="fs-6 text-secondary text-opacity-50">Posted by {{user.username}} on {{format_date created_at}}</span><br>
+        <span style="float:right" class="text-secondary fs-6 text-opacity-50">{{comments.length}} {{format_plural "comment" comments.length}}</span>
       </div>
       <div class="content">
-          <p class="fs-5">{{post_text}}</p>
+          <p class="fs-6">{{post_text}}</p>
       </div>
     </article>
