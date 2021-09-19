@@ -1,17 +1,17 @@
-<form class="login-form">
-    <div>
-        <label for="email-login">email:</label>
-        <input type="text" id="email-login" />
+<form class="login-form col-3 mb-4" style="margin: auto;">
+    <div class="mb-3">
+        <label for="email-login" class="form-label">email:</label>
+        <input type="text" id="email-login" class="form-control"/>
     </div>
-    <div>
-        <label for="password-login">password:</label>
-        <input type="password" id="password-login" />
+    <div class="mb-4">
+        <label for="password-login" class="form-label">password:</label>
+        <input type="password" id="password-login" class="form-control" />
     </div>
-    <div>
-        <button type="submit">login</button>
+    <div class="mb-3">
+        <button type="submit" class="btn btn-info">login</button>
     </div>
-</form>
 
-<a href="/signup">Sign Up Here</a>
+    <a href="/signup" class="btn btn-secondary">Sign Up Here</a>
+</form>
 
 <script src="/js/login.js"></script>
