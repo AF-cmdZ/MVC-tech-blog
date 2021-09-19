@@ -1,10 +1,11 @@
-<div class="comments">
+<div class="comments p-3 mb-2 bg-info bg-opacity-10">
     {{#each this}}
     <section class="comment">
-        <div class="meta">
-            {{user.username}} on {{format_date created_at}}
+        <i class="fas fa-comment text-info text-opacity-50"></i>
+        <div class="meta text-secondary text-opacity-75">
+            Comment by: {{user.username}} on {{format_date created_at}}
         </div>
-        <div class="text">
+        <div class="text fst-italic mt-1">
             {{comment_text}}
         </div>
     </section>
