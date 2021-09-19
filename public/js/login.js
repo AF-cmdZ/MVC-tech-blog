@@ -1,4 +1,4 @@
-async function loginFormHandler (event) {
+const loginFormHandler = async (event) => {
     event.preventDefault();
 
     const email = document.querySelector('#email-login').value.trim();
@@ -11,10 +11,10 @@ async function loginFormHandler (event) {
                 email,
                 password: password
             }),
-            headers: {'Content-Type': 'application/json'}
+            headers: {"Content-Type": "application/json"}
         });
             if (response.ok) {
-                document.location.replace('/dashboard');
+                document.location.replace("/dashboard");
             } else {
                 let result = await response.json()
                 alert(result.message)
@@ -24,4 +24,4 @@ async function loginFormHandler (event) {
 
 document
     .querySelector('.login-form')
-    .addEventListener('submit', LoginFormHandler);
+    .addEventListener('submit', loginFormHandler);
